@@ -1,0 +1,17 @@
+services:
+  strongswan:
+    image: strongswan
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - VPN_DOMAIN=vpn.example.com
+      - VPN_USER=your-username
+      - VPN_PASSWORD=your-password
+    ports:
+      - "500:500/udp"
+      - "4500:4500/udp"
+    volumes:
+      - ./server-cert.pem:/etc/ipsec.d/certs/server-cert.pem
+      - ./server-key.pem:/etc/ipsec.d/private/server-key.pem
+    restart: unless-stopped
