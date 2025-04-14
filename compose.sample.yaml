@@ -4,10 +4,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    environment:
-      - VPN_DOMAIN=vpn.example.com
-      - VPN_USER=your-username
-      - VPN_PASSWORD=your-password
+    cap_add:
+      - NET_ADMIN
     ports:
       - "500:500/udp"
       - "4500:4500/udp"

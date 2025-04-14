@@ -3,7 +3,6 @@ FROM debian:stable-slim
 # 必要なパッケージをインストール
 RUN apt-get update && apt-get install -y \
     strongswan \
-    strongswan-pki \
     && rm -rf /var/lib/apt/lists/*
 
 # 設定ファイルをコピー

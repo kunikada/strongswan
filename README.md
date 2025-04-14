@@ -12,7 +12,7 @@
 
    ```bash
    git clone <repository-url>
-   cd strongSwan-docker
+   cd strongswan
    ```
 
 2. 証明書と秘密鍵を用意します。
@@ -35,14 +35,6 @@
    ```
 
 5. VPN クライアントを設定し、`vpn.example.com` に接続します。
-
-## 環境変数
-
-以下の環境変数を `compose.yaml` ファイルで設定できます。
-
-- `VPN_DOMAIN`: VPN サーバーのドメイン名 (例: `vpn.example.com`)。
-- `VPN_USER`: VPN ユーザー名。
-- `VPN_PASSWORD`: VPN パスワード。
 
 ## ポート
 
