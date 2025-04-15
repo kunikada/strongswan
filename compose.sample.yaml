@@ -10,6 +10,7 @@ services:
       - "500:500/udp"
       - "4500:4500/udp"
     volumes:
-      - ./server-cert.pem:/etc/ipsec.d/certs/server-cert.pem
-      - ./server-key.pem:/etc/ipsec.d/private/server-key.pem
+      - ./ca-cert.pem:/etc/swanctl/x509ca/ca-cert.pem
+      - ./server-cert.pem:/etc/swanctl/x509/server-cert.pem
+      - ./server-key.pem:/etc/swanctl/private/server-key.pem
     restart: unless-stopped
